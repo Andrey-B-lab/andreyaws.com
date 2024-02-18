@@ -20,8 +20,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
          args: >
-            -Dsonar.organization=AndrinaTravel          
-            -Dsonar.projectKey=${{ github.event.repository.name }}
+            -Dsonar.organization=andrinatravel         
+            -Dsonar.projectKey=Andrey-B-lab_${{ github.event.repository.name }}
   deploy:
     runs-on: ubuntu-latest
     steps:
