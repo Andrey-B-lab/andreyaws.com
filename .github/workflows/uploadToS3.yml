@@ -18,6 +18,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+         args: >
+            -Dsonar.organization=AndrinaTravel          
+            -Dsonar.projectKey=${{ github.event.repository.name }}
   deploy:
     runs-on: ubuntu-latest
     steps:
